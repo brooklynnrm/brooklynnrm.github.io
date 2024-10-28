@@ -9,4 +9,6 @@ output:
 
 # This is the website I made for Data Science 1. 
 
+I am checking to see if the rename worked.
+
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
