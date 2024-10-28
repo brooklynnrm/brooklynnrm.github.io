@@ -1,0 +1,12 @@
+---
+title: "Brooklynn's Website for Homework Assignment 4"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is the website I made for Data Science 1. 
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
