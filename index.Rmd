@@ -7,8 +7,13 @@ output:
     theme: cerulean
 ---
 
-# This is the website I made for Data Science 1. 
+# Introduction
 
-I am checking to see if the rename worked.
+I am currently a Staff Associate at the Biomarkers Core Laboratory at the Columbia University Medical Center. Here, I work on exposomics projects to better understand the role of environmental exposures on human health. I specialize in Gas Chromatography-High Resolution Mass Spectrometry to measure environmental contaminants. In addition to my work at the Core, I am a part-time student in the M.S. Environmental Health Data Science at the Mailman School of Public Health. 
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+# Publications
+
+# Work Experience
+
+# Education
+
