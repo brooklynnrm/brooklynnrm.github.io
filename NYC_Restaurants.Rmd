@@ -19,8 +19,10 @@ data("rest_inspec")
 
 rest_inspec = 
   rest_inspec |>
-  filter(boro == "MANHATTAN") |>
-  distinct(cuisine_description, dba, inspection_date, score, zipcode, grade) |>
+  filter(inspection_date >= '2017-01-01',
+         boro != "Missing",
+         grade %in% c("A","B","C")) |>
+  select(c(cuisine_description, dba, inspection_date, score, zipcode, grade, boro, street)) |>
   drop_na(grade)
 ```
 
@@ -32,14 +34,17 @@ Column {data-width=650}
 
 ```{r}
 rest_inspec |>
-  filter(cuisine_description == "Pizza") |>
+  filter(boro == "MANHATTAN",
+         cuisine_description %in% c("American","Asian","Chinese","Spanish","Indian","Thai")) |>
   plot_ly(
-    x = ~inspection_date, 
+    x = ~cuisine_description, 
     y = ~score, 
     color = ~grade, 
     alpha = 0.5, 
-    type = "scatter", 
-    mode = "markers")
+    text = ~dba,
+    type = "violin", 
+    mode = "markers")|>
+  layout(title = "Restaurant Grade by Cuisine")
 ```
 
 Column {data-width=350}
@@ -49,8 +54,6 @@ Column {data-width=350}
 
 ```{r}
 rest_inspec |>
-  filter(inspection_date >= '2017-01-01',
-         boro != "Missing") |>
   plot_ly(
     x = ~boro,
     y = ~score,
@@ -67,7 +70,7 @@ rest_inspec |>
 rest_inspec |>
   filter(street == "BROADWAY",
          cuisine_description == "Pizza") |>
-  distinct(dba, building, score) |>
+  distinct(dba, score) |>
   mutate(name = fct_reorder(dba, score)) |>
   plot_ly(
     x = ~name,
