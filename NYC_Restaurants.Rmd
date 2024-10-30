@@ -1,0 +1,79 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec |>
+  filter(boro == "MANHATTAN") |>
+  distinct(cuisine_description, dba, inspection_date, score, zipcode, grade) |>
+  drop_na(grade)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest_inspec |>
+  filter(cuisine_description == "Pizza") |>
+  plot_ly(
+    x = ~inspection_date, 
+    y = ~score, 
+    color = ~grade, 
+    alpha = 0.5, 
+    type = "scatter", 
+    mode = "markers")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec |>
+  filter(inspection_date >= '2017-01-01',
+         boro != "Missing") |>
+  plot_ly(
+    x = ~boro,
+    y = ~score,
+    color = ~boro,
+    type = "box",
+    text = ~grade
+  ) |>
+  layout(title = "Inspection Score by Borough")
+```
+
+### Chart C
+
+```{r}
+rest_inspec |>
+  filter(street == "BROADWAY",
+         cuisine_description == "Pizza") |>
+  distinct(dba, building, score) |>
+  mutate(name = fct_reorder(dba, score)) |>
+  plot_ly(
+    x = ~name,
+    y = ~score,
+    type = "bar",
+    color = ~name
+  )
+```
+

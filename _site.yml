@@ -14,4 +14,4 @@ navbar:
       href: http://github.com/brooklynnrm/
 output:
   html_document:
-        theme: cerulean
+        theme: cosmo
