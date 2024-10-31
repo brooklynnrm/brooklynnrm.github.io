@@ -7,6 +7,14 @@ output:
     theme: cosmo
 ---
 
+Welcome to my website. Here are some helpful links to get to know me:
+
+[Center for Innovative Exposomics](https://www.publichealth.columbia.edu/research/centers/center-innovative-exposomics)
+
+[Github](https://github.com/brooklynnrm)
+
+[linkedIn](https://www.linkedin.com/in/brooklynn-mcneil-922641146/)
+
 # Introduction
 
 <img src="pics/oysters.jpeg" style="width:75%"/>
@@ -32,8 +40,6 @@ Lan, Q., Vermeulen, R., Rahman, M., Dai, Y., Hu, W., **Brooklynn McNeil**, Lin, 
 ### **Columbia University Irving Medical Center/** Staff Associate III
 August  2022 - PRESENT,  New York, NY
 
-\
-
 -    Specialize in GC-HRAM-MS for Exposomics as an analytical chemist at the Biomarkers Core Laboratory.
 
 -   Update and optimize sample preparation for high throughput analysis using Opentron liquid handlers.
@@ -50,7 +56,7 @@ August  2022 - PRESENT,  New York, NY
 
 \
 
--    **Ichan School of Medicine - Mount Sinai** / Associate Researcher I
+### **Ichan School of Medicine - Mount Sinai** / Associate Researcher I
 June 2021 - August 2022,  New York, NY
 
 -   Operated and maintained the GC-Orbitrap system to ensure accurate and reliable analytical performance.
@@ -60,6 +66,8 @@ June 2021 - August 2022,  New York, NY
 -   Developed  automated methods on liquid handling robots, significantly increasing efficiency and enabling high throughput analysis.
 
 -   Generated comprehensive QAQC reports utilizing quantitative methods, leveraging ThermoFisher software for data analysis and reporting.
+
+\
 
 ### **New Materials Institute - UGA /** Laboratory Technician III
 July 2020 - May 2021,  Athens, GA

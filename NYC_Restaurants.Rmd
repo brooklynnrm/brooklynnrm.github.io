@@ -76,7 +76,8 @@ rest_inspec |>
     x = ~name,
     y = ~score,
     type = "bar",
-    color = ~name
-  )
+    text = ~name
+  ) |>
+  layout(title = "Pizza on Broadway")
 ```
 
